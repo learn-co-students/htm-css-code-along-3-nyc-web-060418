@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css?family=Clicker+Script|Elsie+Swash+Caps');
+
+/*
+CSS Syntax:
+
+selector {
+  property: value;
+  property: value;
+}
+
+No symbol in front, looks for an element.
+. in front, looks for a class.
+# in front, looks for an ID selector.
+
+Type selector
+The type selector allows us to select elements using their tag name. */
+
+p { /* This selects all <p> elements. */
+  font-size: 1em; /* 16px (an exact amount regardless of browser), ?pt (vary w/ browser),
+  100% (relative to element), 1em (relative - have different widths depending on font. Better to use
+  em vs. px in regards to responsive design. 16px = 1em.) */
+  line-height: 1.5em;
+}
+
+figcaption {
+  /* font-weight: normal;
+  font-size: 0.75em;
+  line-height: 1.5em;
+  font-family: Georgia, "New Times Roman", serif; */
+  font: normal 0.75em/1.5em 'Elsie Swash Caps', "New Times Roman", cursive;
+  color: #777;
+  text-align: right;
+}
+/* Class selectors (can be applied to as many elements as you like) */
+
+.milk-text { /* selects elements with class="milk-text" */
+  font: bold 2.6em 'Elsie Swash Caps', cursive;
+  color: white;
+  text-shadow: 0 2px 3px #000;
+}
+
+/* ID selector (apply to one unique element per page) */
+#logo { /* select elements with id="logo" */
+  background: aqua;
+}
+
+/* Descendent selector */
+
+#logo h1 { /* selects <h1> if inside the id="logo" */
+  font-family: 'Clicker Script', cursive;
+}
+
+#logo h2 { /* selects <h2> if inside the id="logo" */
+  font-family: 'Elsie Swash Caps', cursive;
+}
+
+/* Pseudo selector (selects based on an element's relationship to other elements, or an event state) */
+
+#details a:link, #details a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+#details a:hover {
+  color: black;
+  text-decoration: underline;
+}
+
+@details a:active {
+  color:red;
+}
